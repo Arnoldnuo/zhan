@@ -20,8 +20,6 @@ article_dir = '/root/wwwroot/zhanqun/static/txt/4'
 image_dir = '/root/wwwroot/zhanqun/static/images'
 
 # 数据库连接
-conn=MySQLdb.connect(host=db_host,user=db_user,passwd=db_password,db=db_name,port=db_port,charset='utf8')
-
 def addArticle(title,content):
     title_md5 = hashlib.md5(title).hexdigest() 
     # conn=MySQLdb.connect(host=db_host,user=db_user,passwd=db_password,db=db_name,port=db_port,charset='utf8')
@@ -34,7 +32,7 @@ def addArticle(title,content):
 
 def getArticle(id):
     selectSql = 'select * from article where id = "%s"' % id
-    # conn=MySQLdb.connect(host=db_host,user=db_user,passwd=db_password,db=db_name,port=db_port,cursorclass=MySQLdb.cursors.DictCursor,charset='utf8')
+    conn=MySQLdb.connect(host=db_host,user=db_user,passwd=db_password,db=db_name,port=db_port,cursorclass=MySQLdb.cursors.DictCursor,charset='utf8')
     cur = conn.cursor()
     count = cur.execute(selectSql)
     articleObj = cur.fetchone()
@@ -98,4 +96,4 @@ def pageHtml(id):
     
 if __name__ == '__main__':
     app.debug = True
-    app.run(port=5000, host='0.0.0.0')
+    app.run(port=80, host='0.0.0.0')
