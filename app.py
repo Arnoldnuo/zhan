@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 import sys
-sys.path.append('venv/lib/python2.7/site-packages')
-
-import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
@@ -22,7 +19,7 @@ image_dir = '/root/wwwroot/zhanqun/static/images'
 # 数据库连接
 def addArticle(title,content):
     title_md5 = hashlib.md5(title).hexdigest() 
-    # conn=MySQLdb.connect(host=db_host,user=db_user,passwd=db_password,db=db_name,port=db_port,charset='utf8')
+    conn=MySQLdb.connect(host=db_host,user=db_user,passwd=db_password,db=db_name,port=db_port,charset='utf8')
     cur = conn.cursor()
     insertSql = "insert ignore into article(id,title,content) values(%s, %s, %s)"
     cur.execute(insertSql, (title_md5, title, content))
@@ -95,5 +92,4 @@ def pageHtml(id):
     return render_template('page.html',article = article, images = images, news=articleList[0:10], hots = articleList[10:20]) 
     
 if __name__ == '__main__':
-    app.debug = True
     app.run()
