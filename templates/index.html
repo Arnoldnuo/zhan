@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>新快网--新快报官方网站/手机部落/明天报纸今晚看/人人做记者/广州新闻/广东新闻</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="/static/css/2014_css/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- 顶部导航菜单 -->
+    <div class="topNav">
+        <div class="nav"><a href="http://www.xkb.com.cn">首页</a><a href="http://www.ksyksy.com" target="_blank" class="navMark">快摄影</a><a href="http://news.xkb.com.cn/guangzhou/">广州</a><a href="http://news.xkb.com.cn/guangdong/">广东</a><a href="http://news.xkb.com.cn/zhongguo/">中国</a>
+            <a href="http://news.xkb.com.cn/guoji/">国际</a><a href="http://news.xkb.com.cn/pinglun/">评论</a><a href="http://news.xkb.com.cn/caijing/">财经</a><a href="http://news.xkb.com.cn/caipiao/">彩票</a><a href="http://news.xkb.com.cn/fangchan/">房产</a>
+            <a href="http://news.xkb.com.cn/tiyu/">体育</a>
+            <a href="http://news.xkb.com.cn/yule/">娱乐</a><a href="http://news.xkb.com.cn/qinggan/">情感</a><a href="http://news.xkb.com.cn/gongyi/">公益</a><a href="http://news.xkb.com.cn/jiankang/">健康</a><a href="http://news.xkb.com.cn/qiye/" target="_blank">企业</a>
+            <a href="http://news.xkb.com.cn/wangshi/">网事</a>
+            <br /><a href="http://bbs.xkb.com.cn/" target="_blank">论坛</a><a href="http://yue.xkb.com.cn/" class="navMark" target="_blank">粤商圈</a><a href="http://news.xkb.com.cn/qiche/">汽车</a><a href="http://news.xkb.com.cn/lvyou/">旅游</a><a href="http://news.xkb.com.cn/shuma/">数码</a>
+            <a href="http://news.xkb.com.cn/shishang/">时尚</a><a href="http://news.xkb.com.cn/shoucang/">收藏</a><a href="http://news.xkb.com.cn/jiaju/">家居</a><a href="http://news.xkb.com.cn/wenhua/">文化</a><a href="http://news.xkb.com.cn/jiaoyu/">教育</a>
+            <a href="http://news.xkb.com.cn/shipin/">食品</a>
+            <a href="http://news.xkb.com.cn/shen_du/">调查</a><a href="http://news.xkb.com.cn/shendu/">深读</a><a href="http://news.xkb.com.cn/shalong/">沙龙</a><a href="http://86.xkb.com.cn/">报料</a><a href="http://www.xkb.com.cn/xinxi/" target="_blank">分类</a>
+            <a href="http://epaper.xkb.com.cn/" target="_blank">电子报</a>
+        </div>
+    </div>
+    <!-- 头条+电子报+特色周刊 -->
+    <div class="main border_3">
+        <!-- 头条+推荐新闻 -->
+        <div class="mainL fl">
+            <ul>
+                {% for hot in news[10:20] %}
+                <li><a target="_blank" href="/page/{{hot.id}}" title="<strong><font color='#FF0000'>{{hot.title}}</font></strong>"><strong><font color='#FF0000'>{{hot.title}}</font></strong></a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- 电子报 -->
+        <div class="mainC fl">
+            <a href="{{news[120]}}" target="_blank">
+                <img src="{{images[0]}}">
+            </a>
+        </div>
+        <!-- 特别推荐 -->
+        <div class="mainR fl">
+            <dt><span class="fl">特别推荐</span></dt>
+            <dd class="weekly">
+                <ul>
+                    {% for tuijian in news[0:10] %}
+                    <li><a target="_blank" href="/page/{{tuijian.id}}" title="{{tuijian.title}}"><strong>{{tuijian.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </dd>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <!-- 粤商圈+广州新闻+评论 -->
+    <div class="main border_3">
+        <!-- 粤商圈 -->
+        <div class="yue fl">
+            <dt><div class="fr"><a href="{{news[122]}}" target="_blank">[更多]</a></div><span class="fl">粤商圈</span></dt>
+            <dd>
+                <ul>
+                    {% for yueshang in news[20:30] %}
+                    <li><a target="_blank" href="/page/{{yueshang.id}}" title="{{yueshang.title}}"><strong>{{yueshang.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </dd>
+        </div>
+        <!-- 广州新闻 -->
+        <div class="gzNews fl">
+            <dt>
+              <div class="fr"><a href="/html/xinwen/guangzhou/" target="_blank">[更多]</a></div>
+              <span class="fl">广州新闻</span>
+            </dt>
+            <dd>
+                <ul>
+                    {% for guangzhou in news[30:40] %}
+                    <li>
+                        <a target="_blank" href="/page/{{guangzhou.id}}" title="{{guangzhou.title}}"><strong>{{guangzhou.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </dd>
+        </div>
+        <!-- 评论 -->
+        <div class="comment fl">
+            <dt><div class="fr"><a href="/html/xinwen/pinglun/" target="_blank">[更多]</a></div><span class="fl">评论</span></dt>
+            <dd>
+                <ul>
+                    {% for pinglun in news[40:50] %}
+                    <li>
+                        <a target="_blank" href="/page/{{pinglun.id}}" title="{{pinglun.title}}"><strong>{{pinglun.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </dd>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+    <!-- 新闻分类 广东+中国+国际 -->
+    <div class="newsClass">
+        <div class="newsClassTitle"><a href="/html/xinwen/guangdong/" target="_blank">广东</a><a href="/html/xinwen/zhongguo/" target="_blank">中国</a><a href="/html/xinwen/guoji/" target="_blank">国际</a>
+        </div>
+        <div class="newsClassContent">
+            <!-- 左侧图片新闻 -->
+            <div class="newsClassL fl">
+                <ul>
+                    <li>
+                        <a href="/page/{{news[1].id}}" target="_blank">
+                            <img src="{{images[1]}}" alt="无死角海景 概念房让你全方位享受印度洋" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[2].id}}" class="text" target="_blank" title="无死角海景 概念房让你全方位享受印度洋">无死角海景 概念房让你全方位享受印度洋</a>
+                    </li>
+                    <li>
+                        <a href="/page/{{news[2].id}}" target="_blank">
+                            <img src="{{images[2]}}" alt="3岁男童被拐走 警方42小时破案" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[2]}}.id" class="text" target="_blank" title="3岁男童被拐走 警方42小时破案">3岁男童被拐走 警方42小时破案</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 中间推荐新闻 -->
+            <div class="newsClassC fl">
+                <ul>
+                    {% for pinglun in news[50:60] %}
+                    <li>
+                        <a target="_blank" href="/page/{{pinglun.id}}" title="{{pinglun.title}}"><strong>{{pinglun.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- 大道·读图 -->
+            <div class="newsClassR fr">
+                <dt><span class="fl">大道·读图</span></dt>
+                <dd>
+                    <span class="bigPic fl"><a href="/page/{{news[3].id}}" target="_blank"><img src="{{images[3]}}" alt="工业记忆" /></a><br /><a href="/page/{{news[4].id}}" target="_blank" title="工业记忆">工业记忆</a></span>
+
+                    <span class="smallPic fl"><a href="/page/{{news[4].id}}" target="_blank"><img src="{{images[4]}}" alt="等待奇迹" /></a><br /><a href="/page/{{news[5].id}}" target="_blank" title="等待奇迹">等待奇迹</a></span>
+
+                    <span class="smallPic fr"><a href="/page/{{news[5].id}}" target="_blank"><img src="{{images[5]}}" alt="广州人的世界杯" /></a><br /><a href="/page/{{news[5].id}}" target="_blank" title="广州人的世界杯">广州人的世界杯</a></span>
+
+                </dd>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+    <!-- 新闻分类 广东+中国+国际 -->
+    <div class="newsClass">
+        <div class="newsClassTitle"><a href="/html/xinwen/guangdong/" target="_blank">经济</a><a href="/html/xinwen/zhongguo/" target="_blank">彩票</a><a href="/html/xinwen/guoji/" target="_blank">楼市</a>
+        </div>
+        <div class="newsClassContent">
+            <!-- 左侧图片新闻 -->
+            <div class="newsClassL fl">
+                <ul>
+                    <li>
+                        <a href="/page/{{news[123].id}}" target="_blank">
+                            <img src="{{images[6]}}" alt="无死角海景 概念房让你全方位享受印度洋" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[124].id}}" class="text" target="_blank" title="无死角海景 概念房让你全方位享受印度洋">无死角海景 概念房让你全方位享受印度洋</a>
+                    </li>
+                    <li>
+                        <a href="/page/{{news[125].id}}" target="_blank">
+                            <img src="{{images[7]}}" alt="3岁男童被拐走 警方42小时破案" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[126].id}}" class="text" target="_blank" title="3岁男童被拐走 警方42小时破案">3岁男童被拐走 警方42小时破案</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 中间推荐新闻 -->
+            <div class="newsClassC fl">
+                <ul>
+                    {% for pinglun in news[60:70] %}
+                    <li>
+                        <a target="_blank" href="/page/{{pinglun.id}}" title="{{pinglun.title}}"><strong>{{pinglun.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- 大道·读图 -->
+            <div class="newsClassR fr">
+                <dt><span class="fl">大道·读图</span></dt>
+                <dd>
+                    <span class="bigPic fl">
+                    <a href="/page/{{news[127].id}}" target="_blank"><img src="{{images[8]}}" alt="工业记忆" /></a><br />
+                    <a href="/page/{{news[128].id}}" target="_blank" title="工业记忆">工业记忆</a></span>
+
+                    <span class="smallPic fl"><a href="/page/{{news[127].id}}" target="_blank"><img src="{{images[9]}}" alt="等待奇迹" /></a><br /><a href="/page/{{news[128].id}}" target="_blank" title="等待奇迹">等待奇迹</a></span>
+
+                    <span class="smallPic fr"><a href="/page/{{news[129].id}}" target="_blank"><img src="{{images[10]}}" alt="广州人的世界杯" /></a><br /><a href="/page/{{news[130].id}}" target="_blank" title="广州人的世界杯">广州人的世界杯</a></span>
+
+                </dd>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+    <!-- 新闻分类 广东+中国+国际 -->
+    <div class="newsClass">
+        <div class="newsClassTitle"><a href="/html/xinwen/guangdong/" target="_blank">体育</a><a href="/html/xinwen/zhongguo/" target="_blank">娱乐</a><a href="/html/xinwen/guoji/" target="_blank">情感</a>
+        </div>
+        <div class="newsClassContent">
+            <!-- 左侧图片新闻 -->
+            <div class="newsClassL fl">
+                <ul>
+                    <li>
+                        <a href="/page/{{news[131].id}}" target="_blank">
+                            <img src="{{images[11]}}" alt="无死角海景 概念房让你全方位享受印度洋" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[132].id}}" class="text" target="_blank" title="无死角海景 概念房让你全方位享受印度洋">无死角海景 概念房让你全方位享受印度洋</a>
+                    </li>
+                    <li>
+                        <a href="/page/{{news[133].id}}" target="_blank">
+                            <img src="{{images[12]}}" alt="3岁男童被拐走 警方42小时破案" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[134].id}}" class="text" target="_blank" title="3岁男童被拐走 警方42小时破案">3岁男童被拐走 警方42小时破案</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 中间推荐新闻 -->
+            <div class="newsClassC fl">
+                <ul>
+                    {% for pinglun in news[70:80] %}
+                    <li>
+                        <a target="_blank" href="/page/{{pinglun.id}}" title="{{pinglun.title}}"><strong>{{pinglun.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- 大道·读图 -->
+            <div class="newsClassR fr">
+                <dt><span class="fl">大道·读图</span></dt>
+                <dd>
+                    <span class="bigPic fl"><a href="/page/{{news[135].id}}" target="_blank"><img src="{{images[13]}}" alt="工业记忆" /></a><br /><a href="/page/{{news[136].id}}" target="_blank" title="工业记忆">工业记忆</a></span>
+
+                    <span class="smallPic fl"><a href="/page/{{news[137].id}}" target="_blank"><img src="{{images[14]}}" alt="等待奇迹" /></a><br />
+                    <a href="/page/{{news[138].id}}" target="_blank" title="等待奇迹">等待奇迹</a></span>
+
+                    <span class="smallPic fr"><a href="/page/{{news[139].id}}" target="_blank"><img src="{{images[15]}}" alt="广州人的世界杯" /></a><br />
+                    <a href="/page/{{news[140].id}}" target="_blank" title="广州人的世界杯">广州人的世界杯</a></span>
+
+                </dd>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+    <!-- 新闻分类 广东+中国+国际 -->
+    <div class="newsClass">
+        <div class="newsClassTitle"><a href="/html/xinwen/guangdong/" target="_blank">健康</a><a href="/html/xinwen/zhongguo/" target="_blank">食品</a><a href="/html/xinwen/guoji/" target="_blank">教育</a>
+        </div>
+        <div class="newsClassContent">
+            <!-- 左侧图片新闻 -->
+            <div class="newsClassL fl">
+                <ul>
+                    <li>
+                        <a href="/page/{{news[141].id}}" target="_blank">
+                            <img src="{{images[16]}}" alt="无死角海景 概念房让你全方位享受印度洋" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[142].id}}" class="text" target="_blank" title="无死角海景 概念房让你全方位享受印度洋">无死角海景 概念房让你全方位享受印度洋</a>
+                    </li>
+                    <li>
+                        <a href="/page/{{news[143].id}}" target="_blank">
+                            <img src="{{images[17]}}" alt="3岁男童被拐走 警方42小时破案" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[144].id}}" class="text" target="_blank" title="3岁男童被拐走 警方42小时破案">3岁男童被拐走 警方42小时破案</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 中间推荐新闻 -->
+            <div class="newsClassC fl">
+                <ul>
+                    {% for pinglun in news[80:90] %}
+                    <li>
+                        <a target="_blank" href="/page/{{pinglun.id}}" title="{{pinglun.title}}"><strong>{{pinglun.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- 大道·读图 -->
+            <div class="newsClassR fr">
+                <dt><span class="fl">大道·读图</span></dt>
+                <dd>
+                    <span class="bigPic fl"><a href="/page/{{news[145].id}}" target="_blank"><img src="{{images[18]}}" alt="工业记忆" /></a><br />
+                    <a href="/page/{{news[146].id}}" target="_blank" title="工业记忆">工业记忆</a></span>
+
+                    <span class="smallPic fl"><a href="/page/{{news[147].id}}" target="_blank"><img src="{{images[19]}}" alt="等待奇迹" /></a><br />
+                    <a href="/page/{{news[148].id}}" target="_blank" title="等待奇迹">等待奇迹</a></span>
+
+                    <span class="smallPic fr"><a href="/page/{{news[149].id}}" target="_blank"><img src="{{images[20]}}" alt="广州人的世界杯" /></a><br />
+                    <a href="/page/{{news[150].id}}" target="_blank" title="广州人的世界杯">广州人的世界杯</a></span>
+
+                </dd>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+    <!-- 新闻分类 广东+中国+国际 -->
+    <div class="newsClass">
+        <div class="newsClassTitle"><a href="/html/xinwen/guangdong/" target="_blank">汽车</a><a href="/html/xinwen/zhongguo/" target="_blank">旅游</a><a href="/html/xinwen/guoji/" target="_blank">数码</a>
+        </div>
+        <div class="newsClassContent">
+            <!-- 左侧图片新闻 -->
+            <div class="newsClassL fl">
+                <ul>
+                    <li>
+                        <a href="/page/{{news[150].id}}" target="_blank">
+                            <img src="{{images[21]}}" alt="无死角海景 概念房让你全方位享受印度洋" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[151].id}}" class="text" target="_blank" title="无死角海景 概念房让你全方位享受印度洋">无死角海景 概念房让你全方位享受印度洋</a>
+                    </li>
+                    <li>
+                        <a href="/page/{{news[152].id}}" target="_blank">
+                            <img src="{{images[22]}}" alt="3岁男童被拐走 警方42小时破案" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[153].id}}" class="text" target="_blank" title="3岁男童被拐走 警方42小时破案">3岁男童被拐走 警方42小时破案</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 中间推荐新闻 -->
+            <div class="newsClassC fl">
+                <ul>
+                    {% for pinglun in news[90:100] %}
+                    <li>
+                        <a target="_blank" href="/page/{{pinglun.id}}" title="{{pinglun.title}}"><strong>{{pinglun.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- 大道·读图 -->
+            <div class="newsClassR fr">
+                <dt><span class="fl">大道·读图</span></dt>
+                <dd>
+                    <span class="bigPic fl"><a href="/page/{{news[154].id}}" target="_blank"><img src="{{images[23]}}" alt="工业记忆" /></a><br />
+                    <a href="/page/{{news[155].id}}" target="_blank" title="工业记忆">工业记忆</a></span>
+
+                    <span class="smallPic fl"><a href="/page/{{news[156].id}}" target="_blank"><img src="{{images[24]}}" alt="等待奇迹" /></a><br />
+                    <a href="/page/{{news[157].id}}" target="_blank" title="等待奇迹">等待奇迹</a></span>
+
+                    <span class="smallPic fr"><a href="/page/{{news[157].id}}" target="_blank"><img src="{{images[25]}}" alt="广州人的世界杯" /></a><br />
+                    <a href="/page/{{news[158].id}}" target="_blank" title="广州人的世界杯">广州人的世界杯</a></span>
+
+                </dd>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+    <!-- 新闻分类 广东+中国+国际 -->
+    <div class="newsClass">
+        <div class="newsClassTitle"><a href="/html/xinwen/guangdong/" target="_blank">时尚</a><a href="/html/xinwen/zhongguo/" target="_blank">收藏</a><a href="/html/xinwen/guoji/" target="_blank">家居</a>
+        </div>
+        <div class="newsClassContent">
+            <!-- 左侧图片新闻 -->
+            <div class="newsClassL fl">
+                <ul>
+                    <li>
+                        <a href="/page/{{news[158].id}}" target="_blank">
+                            <img src="{{images[26]}}" alt="无死角海景 概念房让你全方位享受印度洋" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[159].id}}" class="text" target="_blank" title="无死角海景 概念房让你全方位享受印度洋">无死角海景 概念房让你全方位享受印度洋</a>
+                    </li>
+                    <li>
+                        <a href="/page/{{news[160].id}}" target="_blank">
+                            <img src="{{images[27]}}" alt="3岁男童被拐走 警方42小时破案" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[161].id}}" class="text" target="_blank" title="3岁男童被拐走 警方42小时破案">3岁男童被拐走 警方42小时破案</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 中间推荐新闻 -->
+            <div class="newsClassC fl">
+                <ul>
+                    {% for pinglun in news[100:110] %}
+                    <li>
+                        <a target="_blank" href="/page/{{pinglun.id}}" title="{{pinglun.title}}"><strong>{{pinglun.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- 大道·读图 -->
+            <div class="newsClassR fr">
+                <dt><span class="fl">大道·读图</span></dt>
+                <dd>
+                    <span class="bigPic fl"><a href="/page/{{news[161].id}}" target="_blank"><img src="{{images[28]}}" alt="工业记忆" /></a><br /><a href="/page/{{news[162].id}}" target="_blank" title="工业记忆">工业记忆</a></span>
+
+                    <span class="smallPic fl"><a href="/page/{{news[163].id}}" target="_blank"><img src="{{images[29]}}" alt="等待奇迹" /></a><br />
+                    <a href="/page/{{news[164].id}}" target="_blank" title="等待奇迹">等待奇迹</a></span>
+
+                    <span class="smallPic fr"><a href="/page/{{news[165].id}}" target="_blank"><img src="{{images[30]}}" alt="广州人的世界杯" /></a><br />
+                    <a href="/page/{{news[166].id}}" target="_blank" title="广州人的世界杯">广州人的世界杯</a></span>
+
+                </dd>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+
+
+    <!-- 新闻分类 广东+中国+国际 -->
+    <div class="newsClass">
+        <div class="newsClassTitle"><a href="/html/xinwen/guangdong/" target="_blank">文化</a><a href="/html/xinwen/zhongguo/" target="_blank">网事</a><a href="/html/xinwen/guoji/" target="_blank">调查</a>
+        </div>
+        <div class="newsClassContent">
+            <!-- 左侧图片新闻 -->
+            <div class="newsClassL fl">
+                <ul>
+                    <li>
+                        <a href="/page/{{news[167].id}}" target="_blank">
+                            <img src="{{images[31]}}" alt="无死角海景 概念房让你全方位享受印度洋" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[168].id}}" class="text" target="_blank" title="无死角海景 概念房让你全方位享受印度洋">无死角海景 概念房让你全方位享受印度洋</a>
+                    </li>
+                    <li>
+                        <a href="/page/{{news[169].id}}" target="_blank">
+                            <img src="{{images[32]}}" alt="3岁男童被拐走 警方42小时破案" />
+                        </a>
+                        <em></em>
+                        <a href="/page/{{news[170].id}}" class="text" target="_blank" title="3岁男童被拐走 警方42小时破案">3岁男童被拐走 警方42小时破案</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- 中间推荐新闻 -->
+            <div class="newsClassC fl">
+                <ul>
+                    {% for pinglun in news[110:120] %}
+                    <li>
+                        <a target="_blank" href="/page/{{pinglun.id}}" title="{{pinglun.title}}"><strong>{{pinglun.title}}</strong></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- 大道·读图 -->
+            <div class="newsClassR fr">
+                <dt><span class="fl">大道·读图</span></dt>
+                <dd>
+                    <span class="bigPic fl"><a href="/page/{{news[171].id}}" target="_blank"><img src="{{images[33]}}" alt="工业记忆" /></a><br />
+                    <a href="/page/{{news[172].id}}" target="_blank" title="工业记忆">工业记忆</a></span>
+
+                    <span class="smallPic fl"><a href="/page/{{news[173].id}}" target="_blank"><img src="{{images[34]}}" alt="等待奇迹" /></a><br />
+                    <a href="/page/{{news[174].id}}" target="_blank" title="等待奇迹">等待奇迹</a></span>
+
+                    <span class="smallPic fr"><a href="/page/{{news[175].id}}" target="_blank"><img src="{{images[35]}}" alt="广州人的世界杯" /></a><br />
+                    <a href="/page/{{news[176].id}}" target="_blank" title="广州人的世界杯">广州人的世界杯</a></span>
+
+                </dd>
+            </div>
+        </div>
+        <div class="cl"></div>
+    </div>
+    <a href="#" target="_self" id="toTop" title="返回顶部" onclick="window.scrollTo(0,0);return false" style="display:none;"></a>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{{title}}</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="/static/css/2014_css/xw_content.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- 顶部导航菜单 -->
+    <div class="topNav">
+        <div class="nav"><a href="http://www.xkb.com.cn">首页</a><a href="http://www.ksyksy.com" target="_blank" class="navMark">快摄影</a><a href="http://news.xkb.com.cn/guangzhou/">广州</a><a href="http://news.xkb.com.cn/guangdong/">广东</a><a href="http://news.xkb.com.cn/zhongguo/">中国</a>
+            <a href="http://news.xkb.com.cn/guoji/">国际</a><a href="http://news.xkb.com.cn/pinglun/">评论</a><a href="http://news.xkb.com.cn/caijing/">财经</a><a href="http://news.xkb.com.cn/caipiao/">彩票</a><a href="http://news.xkb.com.cn/fangchan/">房产</a>
+            <a href="http://news.xkb.com.cn/tiyu/">体育</a>
+            <a href="http://news.xkb.com.cn/yule/">娱乐</a><a href="http://news.xkb.com.cn/qinggan/">情感</a><a href="http://news.xkb.com.cn/gongyi/">公益</a><a href="http://news.xkb.com.cn/jiankang/">健康</a><a href="http://news.xkb.com.cn/qiye/" target="_blank">企业</a>
+            <a href="http://news.xkb.com.cn/wangshi/">网事</a>
+            <br /><a href="http://bbs.xkb.com.cn/" target="_blank">论坛</a><a href="http://yue.xkb.com.cn/" class="navMark" target="_blank">粤商圈</a><a href="http://news.xkb.com.cn/qiche/">汽车</a><a href="http://news.xkb.com.cn/lvyou/">旅游</a><a href="http://news.xkb.com.cn/shuma/">数码</a>
+            <a href="http://news.xkb.com.cn/shishang/">时尚</a><a href="http://news.xkb.com.cn/shoucang/">收藏</a><a href="http://news.xkb.com.cn/jiaju/">家居</a><a href="http://news.xkb.com.cn/wenhua/">文化</a><a href="http://news.xkb.com.cn/jiaoyu/">教育</a>
+            <a href="http://news.xkb.com.cn/shipin/">食品</a>
+            <a href="http://news.xkb.com.cn/shen_du/">调查</a><a href="http://news.xkb.com.cn/shendu/">深读</a><a href="http://news.xkb.com.cn/shalong/">沙龙</a><a href="http://86.xkb.com.cn/">报料</a><a href="http://www.xkb.com.cn/xinxi/" target="_blank">分类</a>
+            <a href="http://epaper.xkb.com.cn/" target="_blank">电子报</a>
+        </div>
+    </div>
+    <!-- 文章阅读页d4 结束 -->
+    <!-- 网站位置导航 ----------->
+    <div class="positionNav">
+        您的位置：<a href='http://www.xkb.com.cn/'>新快网</a> > <a href='http://news.xkb.com.cn/'>新闻</a> > <a href='http://news.xkb.com.cn/caijing/'>财经</a> >
+    </div>
+    <!-- 文章内容+右侧信息 -->
+    <div class="main">
+        <div class="mainL fl">
+            <!-- 文章标题 开始 -->
+            <div class="newsTitle fl">
+                <h1>{{ article.title }}</h1>
+                时间：2014-09-01 00:47　　来源：新快报
+            </div>
+            <!-- 文章标题 结束 -->
+            <!-- 文章内容 开始 -->
+            <div class="content fl">
+                <p>&nbsp;</p>
+                <center>
+                    <img src="/static/images/{{images[0]}}" border="1" alt="" />
+                </center>
+                <p>&nbsp;</p>
+                {% autoescape false %} 
+                  {{ article.content }} 
+                {% endautoescape %}
+            </div>
+            <div class="dede_pages">
+                <ul class="pagelist">
+
+                </ul>
+            </div>
+            <!-- /pages -->
+            <!-- 文章内容 结束 -->
+            <!-- 当前文章前后各一条新闻 开始 -->
+            <div class="handle">
+                <div class="context">
+                    <ul>
+                        <li>上一篇：<a href='/page/{{news[0].id}}'>{{news[0].title}}</a> 
+                        </li>
+                        <li>下一篇：<a href='/page/{{news[1].id}}'>{{news[1].title}}</a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mainR fr">
+            <!-- 本报新闻今日排行榜 开始 -->
+            <div class="newsRanking mt25_bot fl">
+                <dt><span>本报新闻今日排行榜</span></dt>
+                <dd>
+                    <ul>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/jiaoyu/2014/0902/347513.html" title="《爸爸去哪儿2》萌娃性格大起底--点击:10718">《爸爸去哪儿2》萌娃性格大起底</a> 
+                        </li>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/guangzhou/2014/0902/347577.html" title="开学首日幼儿园老师集体求涨薪--点击:10686">开学首日幼儿园老师集体求涨薪</a> 
+                        </li>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/zhuanzai/2014/0901/347450.html" title="国家食品药品监管总局发布中秋--点击:10390">国家食品药品监管总局发布中秋</a> 
+                        </li>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/zhuanzai/2014/0902/347622.html" title="广东英德3名辅警勒索性侵失足妇--点击:10282">广东英德3名辅警勒索性侵失足妇</a> 
+                        </li>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/zhuanzai/2014/0902/347621.html" title="18岁癌症女孩微博直播走向死亡--点击:10262">18岁癌症女孩微博直播走向死亡</a> 
+                        </li>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/caijing/2014/0902/347454.html" title="国行iPhone6 定价5288元--点击:10130">国行iPhone6 定价5288元</a> 
+                        </li>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/guangzhou/2014/0901/347446.html" title="韩志鹏挑战冰桶 点名三局座接棒--点击:10097">韩志鹏挑战冰桶 点名三局座接棒</a> 
+                        </li>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/guangzhou/2014/0902/347601.html" title="调查:为什么CBD的空气这样差?--点击:10082">调查:为什么CBD的空气这样差?</a> 
+                        </li>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/yule/2014/0902/347501.html" title="姜文:推荐我们吧, 不然谁代表中--点击:10073">姜文:推荐我们吧, 不然谁代表中</a> 
+                        </li>
+                        <li> <a target="_blank" href="http://news.xkb.com.cn/yule/2014/0902/347503.html" title="又见“艳照”! 这次主角是“影--点击:10031">又见“艳照”! 这次主角是“影</a> 
+                        </li>
+
+                    </ul>
+                </dd>
+            </div>
+            <!-- 本报新闻今日排行榜 结束 -->
+            <!-- 图片新闻 开始 -->
+            <div class="column mt25_bot fl">
+                <dt>最新图片文章</dt>
+                <dd>
+                    <ul class="photoNews">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td width="50%">
+                                        <table cellspacing="2" cellpadding="0" width="98%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="middle">
+                                                        <a href="http://news.xkb.com.cn/tiyu/2014/0902/347553.html">
+                                                            <img src="http://www.xkb.com.cn/uploads/140902/395-140Z2051014I9.jpg" border="0" width="95" height="65" alt="恒大足校携手俱乐部建梯队体系">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="middle"><a style="font-size:12px; color:#006699" target="_blank" href="http://news.xkb.com.cn/tiyu/2014/0902/347553.html">恒大足校携手俱乐部</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td width="50%">
+                                        <table cellspacing="2" cellpadding="0" width="98%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="middle">
+                                                        <a href="http://news.xkb.com.cn/fsgz/2014/0902/347595.html">
+                                                            <img src="http://www.xkb.com.cn/uploads/140902/395-140Z2051533I8.jpg" border="0" width="95" height="65" alt="追寻祖先的考古人">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="middle"><a style="font-size:12px; color:#006699" target="_blank" href="http://news.xkb.com.cn/fsgz/2014/0902/347595.html">追寻祖先的考古人</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <table cellspacing="2" cellpadding="0" width="98%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="middle">
+                                                        <a href="http://news.xkb.com.cn/jiaoyu/2014/0902/347511.html">
+                                                            <img src="http://www.xkb.com.cn/uploads/140902/395-140Z2005149130.jpg" border="0" width="95" height="65" alt="成人教育不是单纯的“升本”教育">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="middle"><a style="font-size:12px; color:#006699" target="_blank" href="http://news.xkb.com.cn/jiaoyu/2014/0902/347511.html">成人教育不是单纯的</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td width="50%">
+                                        <table cellspacing="2" cellpadding="0" width="98%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="middle">
+                                                        <a href="http://news.xkb.com.cn/yule/2014/0902/347491.html">
+                                                            <img src="http://www.xkb.com.cn/uploads/140902/395-140Z200391aF.jpg" border="0" width="95" height="65" alt="《猩球崛起2》:延续四十年的点睛之悟">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="middle"><a style="font-size:12px; color:#006699" target="_blank" href="http://news.xkb.com.cn/yule/2014/0902/347491.html">《猩球崛起2》:延续</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="50%">
+                                        <table cellspacing="2" cellpadding="0" width="98%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="middle">
+                                                        <a href="http://news.xkb.com.cn/caijing/2014/0902/347480.html">
+                                                            <img src="http://www.xkb.com.cn/uploads/140902/395-140Z2005U1Y9.jpg" border="0" width="95" height="65" alt="8月官方、汇丰PMI指数双双回落">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="middle"><a style="font-size:12px; color:#006699" target="_blank" href="http://news.xkb.com.cn/caijing/2014/0902/347480.html">8月官方、汇丰PMI指</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td width="50%">
+                                        <table cellspacing="2" cellpadding="0" width="98%" border="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="middle">
+                                                        <a href="http://news.xkb.com.cn/guoji/2014/0901/347383.html">
+                                                            <img src="http://www.xkb.com.cn/uploads/140901/395-140Z1044T44X.jpg" border="0" width="95" height="65" alt="印度总理抵日 重点谈安全防卫">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="middle"><a style="font-size:12px; color:#006699" target="_blank" href="http://news.xkb.com.cn/guoji/2014/0901/347383.html">印度总理抵日 重点</a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </ul>
+                </dd>
+            </div>
+            <!-- 图片新闻 结束 -->
+            <!-- 大道·读图 开始 -->
+            <div class="column mt25_bot fl">
+                <dt>大道·读图</dt>
+                <dd>
+                    <span class="bigPic fl"><a href="http://news.xkb.com.cn/shoucang/2014/0809/342924.html" target="_blank"><img src="http://www.xkb.com.cn/uploads/allimg/140810/394-140Q00000010-L.jpg" alt="工业记忆" /></a><br /><a href="http://news.xkb.com.cn/shoucang/2014/0809/342924.html" target="_blank" title="工业记忆">工业记忆</a></span>
+
+                    <span class="smallPic fl"><a href="http://epaper.xkb.com.cn/#" target="_blank"><img src="http://www.xkb.com.cn/uploads/allimg/140727/394-140HF406000-L.jpg" alt="等待奇迹" /></a><br /><a href="http://epaper.xkb.com.cn/#" target="_blank" title="等待奇迹">等待奇迹</a></span>
+
+                    <span class="smallPic fr"><a href="http://epaper.xkb.com.cn/#" target="_blank"><img src="http://www.xkb.com.cn/uploads/allimg/140713/394-140G30443470-L.jpg" alt="广州人的世界杯" /></a><br /><a href="http://epaper.xkb.com.cn/#" target="_blank" title="广州人的世界杯">广州人的世界杯</a></span>
+
+                </dd>
+            </div>
+            <!-- 大道·读图 结束 -->
+            <!-- 专题 开始 -->
+            <div class="column mt25_bot fl">
+                <dt>专题</dt>
+                <dd>
+                    <ul>
+                        <li><a target="_blank" title="<strong><font color='#0033CC'>揭底广州三鼎家政乱象丛生</font></strong>" href="http://news.xkb.com.cn/special/society/jzlx.html"><strong><font color='#0033CC'>揭底广州三鼎家政乱象丛生</font></strong></a>
+                        </li>
+                        <li><a target="_blank" title="<strong><font color='#FF0000'>广州十大商圈停车省钱秘笈</font></strong>" href="http://news.xkb.com.cn/special/society/tcc.html"><strong><font color='#FF0000'>广州十大商圈停车省钱秘笈</font></strong></a>
+                        </li>
+                        <li><a target="_blank" title="网上卖电影票，一场微利的战争？" href="http://news.xkb.com.cn/special/weekly/dyp.html">网上卖电影票，一场微利的战争？</a>
+                        </li>
+                        <li><a target="_blank" title="以房养老 且行且完善" href="http://news.xkb.com.cn/special/society/yfyl.html">以房养老 且行且完善</a>
+                        </li>
+                        <li><a target="_blank" title="偷拍窃听器禁售 可想要买真容易" href="http://news.xkb.com.cn/special/society/tpq.html">偷拍窃听器禁售 可想要买真容易</a>
+                        </li>
+                        <li><a target="_blank" title="2014广州小学招生指南" href="http://news.xkb.com.cn/special/society/14zs.html">2014广州小学招生指南</a>
+                        </li>
+                        <li><a target="_blank" title="广州试水冰鲜鸡" href="http://news.xkb.com.cn/special/society/bxj.html">广州试水冰鲜鸡</a>
+                        </li>
+                        <li><a target="_blank" title="2014全国两会" href="http://news.xkb.com.cn/special/politics/14lh.html">2014全国两会</a>
+                        </li>
+                        <li><a target="_blank" title="2013我们的朋友圈" href="http://news.xkb.com.cn/special/politics/pyq.html">2013我们的朋友圈</a>
+                        </li>
+                        <li><a target="_blank" title="探营厦深铁路" href="http://news.xkb.com.cn/special/politics/sxtl.html">探营厦深铁路</a>
+                        </li>
+                        <li><a target="_blank" title="广场舞扰了谁的梦" href="http://news.xkb.com.cn/special/wenti/gcw.html">广场舞扰了谁的梦</a>
+                        </li>
+                        <li><a target="_blank" title="把脉TVB无线和ATV亚视" href="http://news.xkb.com.cn/special/wenti/tvbatv.html">把脉TVB无线和ATV亚视</a>
+                        </li>
+
+                    </ul>
+                </dd>
+            </div>
+            <!-- 专题 结束 -->
+        </div>
+        <div class="cl"></div>
+    </div>
+    <!-- 版权信息 -->
+    <div class="copyright">
+        <div style="width:960px;">
+            <a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备10220059号</a>　　<a href="http://www.xkb.com.cn/info/icps.htm" target="_blank">增值电信业务经营许可证 粤B2-20070170</a>
+            <br />版权所有 © 广东新快报媒体广告有限公司
+        </div>
+        <div style="width:960px; display:block">
+            <p>
+                <span class="fl"><a href="http://www.gzjd.gov.cn/newgzjd/baojing/110.jsp?catid=318" target="_blank" rel="nofollow"><img width="36" height="43" border="0" alt="广州网络警察报警平台" src="http://www.xkb.com.cn/img/2014_images/ktjc.gif"></a></span>
+                <span class="fr"><a href="http://www.gzjd.gov.cn/newgzjd/baojing/110.jsp?catid=318" target="_blank" rel="nofollow">广州网络警<br>
+            察报警平台</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://net.china.cn/chinese/index.htm" target="_blank" rel="nofollow"><img width="44" height="44" border="0" alt="不良信息举报中心" src="http://www.xkb.com.cn/img/2014_images/home_b.gif"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://net.china.cn/chinese/index.htm" target="_blank" rel="nofollow">不良信息<br>
+            举报中心</a></span>
+            </p>
+            <p>
+                <span style="width:44px;" class="fl"><a href="http://www.wenming.cn" target="_blank" rel="nofollow"><img width="44" height="42" border="0" alt="中国文明网传播文明" src="http://www.xkb.com.cn/img/2014_images/wmlogo.gif"></a></span>
+                <span style="width:64px;" class="fr"><a class="lcblack" href="http://www.wenming.cn" target="_blank" rel="nofollow">中国文明网<br>传播文明</a></span>
+            </p>
+        </div>
+        <div class="cl"></div>
+    </div>
+</body>
+
+</html>

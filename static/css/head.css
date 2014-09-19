@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+.topNav{
+	width:100%; 
+	background:#4C4C4C; 
+	border-bottom:3px solid #6C6C6C; 
+	margin:auto;
+}
+.topNav .nav{
+	width:960px;
+	height:49px;
+	margin:auto;
+	line-height:22px;
+	font-size:12px;
+	padding-top:7px;
+	overflow:hidden;
+}
+.nav a{
+	color:#fff;
+	padding:3px;
+	margin:0 12px 0 13px;
+	font-size:12px;
+	line-height: 22px;
+}
+.nav a:hover{
+	text-decoration:none;
+	color:#0d519c;
+	background:#cae1ee;
+	font-size:12px;
+	line-height: 22px;
+}
+.nav .navMark{
+	background:#ffaa00;
+}
+.topLogo{
+	width:950px;
+	height:75px;
+	padding:23px 0 0 10px;
+	margin:auto;
+}
+.topLogo .logo{
+	width:240px;
+	height:65px;
+	background:url(../../img/2014_images/xkw_logo.jpg) no-repeat;
+}
+.logo img{
+	width:240px;
+	height:65px;
+}
+.topLogo .topLogoR{
+	width:630px;
+}
+.topLogo .topLogoR ul{
+	width:100%;
+	float:right;
+}
+.topLogo .topLogoR li{
+	width:auto;
+	height:28px;
+	padding-left:25px;
+	font-size:12px;
+	color:#767676;
+	position:relative;
+	z-index:199;
+	float:right;
+	line-height:28px;
+}
+.topLogo .topLogoR li a{
+	font-size:12px;
+	color:#767676;
+	line-height:28px;
+}
+.topLogo .topLogoR li a:hover{
+	color:#770010;
+}
+.xkb_wx{
+	position:absolute;
+	left:-110px;
+	top:25px;
+	padding:19px 0 0 103px;
+	z-index:200;
+	width:96px;
+	height:91px;
+	color:#fff;
+	background:url(../../img/2014_images/xkb_wx_ewm_bg.gif) no-repeat;
+}
+.topLogoR .search{
+	width:373px;
+	height:28px;
+	border:1px solid #E8E8E8;
+	padding-left:5px;
+}
+.topLogoR .search .text{
+	width:280px;
+	height:28px;
+	color:#767676;
+	line-height:28px;
+}
+.topLogoR .search .ant{
+	width:27px;
+	height:28px;
+	background:url(../../img/2014_images/search_img.jpg) no-repeat;
+}

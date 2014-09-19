@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* CSS Document */
+/* Author Alex Lam */
+/* layout styling */
+@import url(body.css);
+@import url(public.css);
+@import url(head.css);
+@import url(bottom.css);
+
+
+.positionNav{
+	width:960px;
+	height:32px;
+	border-bottom:3px solid #4C4C4C;
+	margin:15px auto 40px auto;
+	font-size:12px;
+	text-indent:10px;
+	color:#252525;
+	line-height:32px;
+}
+.positionNav a{
+	font-size:12px;
+	color:#252525;
+	line-height:32px;
+}
+.main{
+	width:960px;
+	margin:0 auto 20px auto;
+	overflow:hidden;
+}
+.main .mainL{
+	width:650px;
+	overflow:hidden;
+	color:#333;
+}
+.mainL .newsTitle{
+	width:640px;
+	border-bottom:1px dotted #DADADA;
+	margin:0 auto 20px auto;
+	color:#00A0C6;
+	padding:0 0 0 10px;
+	font-size:12px;
+}
+.mainL .newsTitle h1 {
+	font:600 28px/32px "Microsoft Yahei";
+	color:#262626;
+	margin:0 0 15px 0;
+}
+.main .mainL .xwAd{
+	width:650px;
+	padding:20px 0 20px 0;
+	text-align:center;
+}
+.main .mainL .content{
+	width:590px;
+	padding:10px 30px;
+}
+.main .mainL .content p{
+	margin-top:20px;
+	text-indent:2em;
+}
+
+.main .mainR{
+	width:270px;
+}
+.mainR .newsRanking dt{
+	width:270px;
+	height:28px;
+}
+.mainR .newsRanking dt span{
+	height:24px;
+	background:#00A0C6;
+	font:18px/24px "Microsoft Yahei";
+	color:#fff;
+	padding:0 8px 0 8px;
+}
+.mainR .newsRanking dd{
+	width:270px;
+	background:url(../../img/2014_images/nyNewsRanking_bg.jpg) 0 8px no-repeat;
+}
+.mainR .newsRanking dd li{
+	width:260px;
+	height:26px;
+	overflow:hidden;
+	text-indent:23px;
+	float:left;
+}
+.mainR .column dt{
+	width:260px;
+	height:34px;
+	border-top:3px solid #00A0C6;
+	border-bottom:1px solid #DADADA;
+	font:600 18px/34px "Microsoft Yahei";
+	color:#00A0C6;
+	text-indent:10px;
+}
+.mainR .column dd{
+	width:260px;
+	margin-top:10px;
+}
+.mainR .column dd li{
+	width:260px;
+	height:28px;
+	float:left;
+	background:url(../../img/2014_images/news_img.jpg) 5px 14px no-repeat;
+	text-indent:15px;
+	overflow:hidden;
+}
+.mainR .column dd ul.photoNews li{
+	width:120px;
+	height:100px;
+	padding:0 5px 10px 5px;
+	overflow:hidden;
+	float:left;
+	line-height:18px;
+	background:none;
+	text-align:center;
+	text-indent:0;
+}
+.mainR .column dd ul.photoNews li img{
+	width:120px;
+	height:75px;
+}
+.mainR .column dd ul.photoNews li a{
+	font-size:12px;
+	line-height:18px;
+}
+
+/****************
+文章内容底下部分样式
+****************/
+.wxWzfx{
+	width:638px; 
+	margin:30px 0 30px 0; 
+	border:1px solid #CCC; 
+	padding:5px;
+}
+.wxWzfx .wzfx{
+	width:300px; 
+	padding-top:15px;
+}
+.jiathis_txt{
+	float:left;
+	font-size:22px;
+	text-decoration:none;
+	line-height:24px!important;
+}
+.boxoff{
+	height:10px;
+	overflow:hidden;
+	clear:both;
+	background:url(../../img/2014_images/boxoff.gif) left 15px repeat-x;
+	margin:4px auto;
+	padding-top:10px;
+}
+.boxoff strong{
+	display:block;
+	width:8px;
+	height:10px;
+	overflow:hidden;
+	font-size:0px;
+	line-height:100px;
+	background:url(../../img/2014_images/boxoff.gif) right -10px no-repeat;
+	float:left;
+}
+.handle{
+	height:59px;
+	padding-top:12px;
+	overflow:hidden;
+	clear:both;
+}
+.handle .context{
+	float:left;
+}
+.handle .context ul li{
+	line-height:28px;
+	color:#888;
+}
+.handle .context ul li a{
+	line-height:28px;
+	color:#222;
+}
+
+/*******************
+文章阅读页内容过长分页样式
+*******************/
+.dede_pages{
+}
+.dede_pages ul{
+	float:left;
+	padding:12px 30px 12px 30px;
+}
+.dede_pages ul li{
+	float:left;
+	font-family:Tahoma;
+	line-height:17px;
+	margin-right:6px;
+}
+.dede_pages ul li a{
+	float:left;
+	padding:2px 4px 2px;
+	color:#666;
+	border-bottom:1px solid #EEE;
+}
+.dede_pages ul li a:hover{
+	color:#690;
+	text-decoration:none;
+	padding:2px 4px 1px;
+	border-bottom:2px solid #690;
+}
+

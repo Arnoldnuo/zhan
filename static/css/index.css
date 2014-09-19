@@ -1,0 +1,458 @@
+@charset "utf-8";
+/* CSS Document */
+/* Author Alex Lam */
+/* layout styling */
+@import url(body.css);
+@import url(public.css);
+@import url(head.css);
+@import url(bottom.css);
+
+/*----------- Title -----------*/
+h1{
+	padding:0px;
+	margin:0px;
+	font:bold 20px/34px "Microsoft Yahei","Arial Narrow",sans-serif;
+}
+h2{
+	padding:0 0 6px 0;
+	margin:0px;
+	font:600 16px/28px "Microsoft Yahei","Arial Narrow",sans-serif;
+	color:#980015;
+	text-align:center;
+}
+
+/***** 公共 *****/
+.main{
+	width:960px;
+	margin:30px auto;
+}
+.border_3{
+	border-top:3px solid #DADADA;
+}
+.main dt{
+	width:100%;
+	height:36px;
+	overflow:hidden;
+	text-align:right;
+	line-height:26px;
+}
+.main dt a{
+	font-size:12px;
+	color:#8A8A8A;
+	line-height:44px;
+}
+.main dt a:hover{
+	color:#770010;
+}
+.main dt span{
+	width:auto;
+	height:20px;
+	padding:5px;
+	background:#1BADAA;
+	font:18px/20px "Microsoft Yahei","Arial Narrow",sans-serif;
+	color:#fff;
+}
+.main dd{
+	width:100%;
+	padding-top:10px;
+}
+.mainL li, .main dd li{
+	width:100%;
+	height:28px;
+	overflow:hidden;
+	background:url(../../img/2014_images/news_img.jpg) 5px 13px no-repeat;
+	float:left;
+	text-indent:15px;
+}
+
+
+/******* 滚动新闻 *********/
+.rollingNews{
+	width:940px;
+	height:32px;
+	margin:auto;
+	border:1px solid #E8E8E8;
+	padding:0 10px 0 10px;
+	overflow:hidden;
+}
+.rollingNews li{
+	height:32px;
+	float:left;
+	background:url(../../img/2014_images/news_img.jpg) 5px 14px no-repeat;
+	text-indent:15px;
+	padding-right:15px;
+}
+.rollingNews li a{
+	font-size:12px;
+	line-height:32px;
+}
+.rollingNews li a:hover{
+	color:#770010;
+}
+
+
+
+/*****头条新闻+电子报+特色周刊 *****/
+.main .mainL{
+	width:345px;
+	padding-top:10px;
+}
+.main .mainL p{
+	text-align:center;
+}
+.main .mainL p a{
+	font-size:12px;
+}
+.main .mainC{
+	width:280px;
+	margin:0 17px 0 17px;
+	background:#DADADA url(../../img/2014_images/epaper_left_line.jpg) no-repeat;
+	padding-left:8px;
+	height:394px;
+	overflow:hidden;
+}
+.main .mainC img{
+	width:272px;
+	height:386px;
+}
+
+.main .mainR{
+	width:293px;
+}
+.main .mainR dd.weekly li{
+	width:293px;
+	height:28px;
+	overflow:hidden;
+	background:none;
+	text-indent:0;
+}
+
+/******幻灯片+微博******/
+.main .hdp{
+	width:610px;
+	height:342px;
+	overflow:hidden;
+}
+/******幻灯片 开始*******/
+.hdp .banner{
+	width:610px;
+	height:342px; 
+	position:relative; 
+	overflow:hidden;
+}
+.banner-btn{
+	display:none;
+}
+.banner-btn a{
+	display:block; 
+	line-height:40px; 
+	position:absolute;
+	top:160px; 
+	width:40px; 
+	height:40px;
+	background-color:#000; 
+	opacity:0.3; 
+	filter:alpha(opacity=30) color: rgb(255, 255, 255);
+	overflow:hidden; 
+	z-index:4;
+}
+.prevBtn{
+	left:5px;
+}
+.nextBtn{
+	right:5px;
+}
+.banner-img{
+	font-size:0; 
+	*word-spacing:-1px;/* IE6、7 */ 
+	letter-spacing:-3px; 
+	position:relative;
+}
+.banner-img li{
+	display:inline-block;
+	*display:inline;
+	*zoom:1;/* IE6、7 */ 
+	vertical-align:top; 
+	letter-spacing:normal;
+	word-spacing:normal; 
+	font-size:12px;
+	position:relative;
+	background:none;
+	float:left;
+}
+.banner-img li img{
+	width:608px;
+	height:340px;
+	border:1px solid #000;
+}
+.banner-img li .hdpTitle{
+	width:100%;
+	height:40px;
+	background-color:#000; 
+	opacity:0.7; 
+	filter:alpha(opacity=70);
+	overflow:hidden; 
+	z-index:2;
+	bottom:0;
+	left:0;
+	position:absolute;
+	text-indent:10px;
+	float:left;
+}
+.banner-img li .hdpTitle a{
+	color:#fff;
+	font:16px/40px "Microsoft Yahei","Arial Narrow",sans-serif;
+}
+.banner-img li .hdpTitle a:hover{
+	text-decoration:none;
+}
+.banner i{
+	width:15px;
+	height:23px;
+	cursor:pointer;
+	margin:8px 0 0 12px;
+	display:block;
+	background:url(../../img/2014_images/hdp_lrjz.png) no-repeat;
+}
+.banner .nextBtn i{
+	background-position:0px -24px;
+}
+.banner .prevBtn i{
+	background-position:0px 0px;
+}
+.banner-circle{
+	position:absolute;
+	right:15px;
+	bottom:11px;
+	height:13px;
+	text-align:center;
+	font-size:0;
+	border-radius:10px; 
+	background:rgba(255,255,255,0.3);
+	filter:alpha(opacity:30);
+	z-index:3;
+}
+.banner-circle li{
+	border-radius:10px;
+	margin:2px;
+	display:inline-block;
+	display:-moz-inline-stack;
+	vertical-align:middle;
+	zoom:1;
+	float:left;
+}
+.banner-circle li a{
+	display:block;
+	padding-top:9px;
+	width:9px;
+	height:0;
+	border-radius:50%; 
+	background:#B7B7B7;
+	overflow:hidden;
+}
+.banner-circle .selected a{
+	background:#F40;
+}
+/******幻灯片 结束*******/
+
+.main .weiBo{
+	width:331px;
+	height:341px;
+	overflow:hidden;
+}
+.main .weiBo dd{
+	padding:0;
+}
+
+/********** 粤商圈+广州新闻+评论 **********/
+.main .yue{
+	width:310px;
+}
+.main .gzNews{
+	width:340px;
+	padding:0 28px 0 27px;
+}
+.main .gzNews dd img{
+	width:316px;
+	height:40px;
+	padding:8px 0 8px 0;
+}
+.main .comment{
+	width:255px;
+}
+
+/*********** 新闻分类 ************/
+.newsClass{
+	width:960px; 
+	margin:30px auto;
+}
+.newsClass .newsClassTitle{
+	width:960px;
+	height:47px;
+	margin-bottom:15px;
+	background:url(../../img/2014_images/news_list_title_bg.jpg) no-repeat;
+	text-align:center;
+}
+.newsClass .newsClassTitle a{
+	color:#fff;
+	font:24px/36px "Microsoft Yahei","Arial Narrow",sans-serif;
+	margin:0 15px 0 38px;
+}
+.newsClass .newsClassTitle a:hover{
+	color:#770010;
+	text-decoration:none;
+}
+.newsClass .newsClassContent{
+	width:960px;
+}
+.newsClass .newsClassContent .newsClassL{
+	width:298px;
+}
+.newsClassL li{
+	width:298px;
+	height:142px;
+	overflow:hidden;
+	margin-bottom:25px;
+	position:relative;
+	overflow:hidden;
+}
+.newsClassL li img{
+	width:298px;
+	height:142px;
+}
+.newsClassL em{
+	width:298px;
+	height:28px;
+	background-color:#000; 
+	opacity:0.7; 
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	overflow:hidden; 
+	bottom:0;
+	left:0;
+	position:absolute;
+	display:block;
+}
+.newsClassL li a{
+	font:14px/28px "Microsoft Yahei","Arial Narrow",sans-serif;
+	color:#fff;
+}
+.newsClassL .text{
+	width:298px;
+	height:28px;
+	bottom:0;
+	left:0;
+	position:absolute;
+	text-indent:10px;
+}
+.newsClass .newsClassContent .newsClassC{
+	width:340px;
+	padding:0 34px 0 34px;
+}
+.newsClassC p{
+	font-size:12px;
+	color:#666666;
+	line-height:20px;
+	padding-bottom:15px;
+	border-bottom:1px dotted #666666;
+	margin-bottom:10px;
+}
+.newsClassC p a{
+	font-size:12px;
+	color:#1BADAA;
+	line-height:20px;
+	vertical-align:top;
+}
+.newsClassC li{
+	width:340px;
+	height:28px;
+	overflow:hidden;
+}
+.newsClass .newsClassContent .newsClassR{
+	width:254px;
+	overflow:hidden;
+}
+.newsClassR dt{
+	width:254px;
+	height:24px;
+	border-bottom:1px solid #DADADA;
+	margin-bottom:10px;
+	overflow:hidden;
+}
+.newsClassR dt span{
+	width:auto;
+	height:24px;
+	padding:2px 5px 5px 5px;
+	background:#1BADAA;
+	font:16px/20px "Microsoft Yahei","Arial Narrow",sans-serif;
+	color:#fff;
+}
+.newsClassR dt div a{
+	font-size:12px;
+	color:#8A8A8A;
+	line-height:24px;
+}
+.newsClassR dt a:hover{
+	color:#770010;
+}
+.newsClassR dd{
+	width:254px;
+	overflow:hidden;
+}
+.newsClassR dd li{
+	width:254px;
+	height:28px;
+	float:left;
+	background:url(../../img/2014_images/news_img.jpg) 5px 14px no-repeat;
+	text-indent:15px;
+	overflow:hidden;
+}
+
+/******* 最强回复 ********/
+.newsClassR .reply{
+	width:234px;
+	height:259px;
+	padding:50px 10px 0 10px;
+}
+.newsClassR .reply li{
+	width:234px;
+	height:30px;
+	float:left;
+	text-indent:15px;
+	overflow:hidden;
+	line-height:30px;
+}
+
+/******* 合作伙伴 ********/
+.partner{
+	width:940px;
+	margin:30px auto 0 auto;
+	padding-top:10px;
+}
+.partner li{
+	height:65px;
+	padding-right:15px;
+	float:left;
+	font:bold 28px/34px "Microsoft Yahei","Arial Narrow",sans-serif;
+	color:#4C4C4C;
+	vertical-align:top;
+}
+
+/***********************
+回到顶部
+***********************/
+#toTop:hover{
+	opacity:1;
+	filter:alpha(opacity=100);
+}
+#toTop{
+	width:54px;
+	height:54px;
+	display:block;
+	position:fixed;
+	right:25px;
+	bottom:45px;
+	background:url(../../img/2014_images/toTop.gif) no-repeat;
+	opacity:0.3;
+	filter:alpha(opacity=30);
+}

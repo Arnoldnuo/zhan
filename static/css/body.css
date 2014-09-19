@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------- Body Tag -----------*/
+
+body{
+	margin:0px 0px 0px 0px; 
+	background:#FFF; 
+	font:14px/28px "宋体","Microsoft Yahei",Arial,Helvetica,sans-serif; 
+	color:#2D374B;
+	-webkit-text-size-adjust:100%;
+}
+/* Firefox Scrollbar Hack - Do not remove   em_wfs_wrapper_table_form */
+
+html{
+	margin-bottom:1px; 
+	height:100%!important; 
+	height:auto;
+}
+
+body,div,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,span,form,fieldset,legend,input,textarea,select{
+	margin:0;
+	padding:0;
+}
+dt,dd{
+	float:left;
+}
+object,textarea,img{
+	vertical-align:top;
+}
+li{
+	list-style:none;
+}
+input,select{
+	padding:0; 
+	margin:0;
+	border:0;
+}
+img{
+	border:0; 
+	padding:0; 
+	margin:0;
+}
+h1,h2,h3,h4,h5,h6{
+	padding:0px; 
+	margin:0px;
+}
+ol{
+	margin:0; 
+	list-style:decimal inside;
+}
+
+/*==============  Link  ================*/
+a{
+	color:#2D374B;
+	text-decoration:none;
+}
+a:hover{
+	color:#770010;
+	text-decoration:underline;
+}
+
+/*----------- Clearfix -----------*/
+
+.clearfix:after {
+	clear: both;
+	display: block;
+	content: ".";
+	height: 0;
+	visibility: hidden;
+}
+* html > body .clearfix {
+	width: 100%;
+	display: block;
+}
+* html .clearfix {
+	height: 1%;
+}
+.cl{
+	clear:both; 
+	height:0px;
+	font-size:0px;
+	line-height:0px;
+}

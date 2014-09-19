@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------- Location -----------*/
+.tc{
+	text-align:center;
+}
+.tl{
+	text-align:left;
+}
+.tr{
+	text-align:right;
+}
+.dis{
+	display:block;
+}
+.undis{
+	display:none;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+
+/********* 公共 **********/
+.mt25_bot{
+	margin-bottom:25px;
+}
+.w_100{
+	width:100%;
+}
+.pTop_30{
+	padding-top:30px;
+}
+
+/****** 页面底部百度广告 *******/
+.layout{
+	width:960px;
+	margin:auto;
+}
+
+/********* 大道·读图 **********/
+.bigPic{
+	padding-bottom:5px;
+	text-align:center;
+}
+.bigPic img{
+	width:254px;
+	height:160px;
+}
+.bigPic a, .smallPic a{
+	font-size:14px;
+	line-height:22px;
+}
+.smallPic{
+	width:122px;
+	text-align:center;
+}
+.smallPic img{
+	width:122px;
+	height:75px;
+}
+/********* 大道·读图 **********/
