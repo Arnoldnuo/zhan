@@ -16,8 +16,8 @@ db_user = 'root'
 db_password = '123456'
 db_name = 'zhanqun'
 db_port = 3306
-article_dir = '/Users/Arnoldnuo/Documents/python/zhanqun/static/txt/4'
-image_dir = '/Users/Arnoldnuo/Documents/python/zhanqun/static/images'
+article_dir = '/root/wwwroot/zhanqun/static/txt/4'
+image_dir = '/root/wwwroot/zhanqun/static/images'
 
 # 数据库连接
 conn=MySQLdb.connect(host=db_host,user=db_user,passwd=db_password,db=db_name,port=db_port,charset='utf8')
