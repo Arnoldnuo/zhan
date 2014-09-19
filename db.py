@@ -38,7 +38,7 @@ def readArticle(article_dir):
             with open (filepath, "r") as myfile:
                 file_detail["base_content"] = myfile.read().decode('gbk','ignore').encode('utf-8')
                 file_detail["content"] = "<br />".join(file_detail['base_content'].split())
-                file_detail["title"] = file_name.decode('gbk','ignore').encode('utf-8').replace('\.txt','');
+                file_detail["title"] = file_name.decode('utf-8','ignore').encode('utf-8').replace('\.txt','');
                 file_detail["filepath"] = filepath
                 # 保存文章到数据库
                 addArticle(file_detail["title"], file_detail["content"])
