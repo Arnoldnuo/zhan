@@ -16,7 +16,7 @@ db_user = 'root'
 db_password = '123456'
 db_name = 'zhanqun'
 db_port = 3306
-article_dir = '/Users/Arnoldnuo/Documents/python/zhanqun/static/txt/4'
+article_dir = '/root/wwwroot/zhanqun/static/txt'
 image_dir = '/Users/Arnoldnuo/Documents/python/zhanqun/static/images'
 
 def addArticle(title,content):
@@ -42,7 +42,7 @@ def readArticle(article_dir):
                 file_detail["filepath"] = filepath
                 # 保存文章到数据库
                 addArticle(file_detail["title"], file_detail["content"])
-                print '添加成功'
+                print u'添加成功'
                 # 删除文件
                 #os.remove(file_detail["filepath"])
 
