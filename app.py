@@ -3,6 +3,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+from werkzeug.contrib.fixers import ProxyFix
 import os,sys,random
 import MySQLdb,hashlib
 import MySQLdb.cursors
@@ -91,9 +92,9 @@ def pageHtml(id):
     article['title'] = article['title'].replace('.txt','')
     return render_template('page.html',article = article, images = images, news=articleList[0:10], hots = articleList[10:20]) 
 
-'''
+
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 if __name__ == '__main__':
-    app.debug = True
+    #app.debug = True
     app.run(host="0.0.0.0")
-'''
