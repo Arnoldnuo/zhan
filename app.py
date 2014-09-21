@@ -91,6 +91,9 @@ def pageHtml(id):
     article['title'] = article['title'].replace('.txt','')
     return render_template('page.html',article = article, images = images, news=articleList[0:10], hots = articleList[10:20]) 
 
+'''
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host="0.0.0.0")
+'''
